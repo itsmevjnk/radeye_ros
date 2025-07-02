@@ -47,7 +47,7 @@ class RadEyeNode(Node):
             return
 
         out = out.decode('ascii').split(' ')
-        self.get_logger().info(f'packet received: {out}')
+        self.get_logger().debug(f'packet received: {out}')
 
         if len(out) >= 7:
             dose = float(out[1]) / 100 # in uSv/h
